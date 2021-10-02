@@ -1,0 +1,17 @@
+{
+    "name": "PolyPerfect.Crafting.Integration",
+    "references": [
+        "GUID:fbf1d4f0c0c54db49a0ef777a18f095c",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:531a9515a3189bd4e93f11a1b812ea2e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
