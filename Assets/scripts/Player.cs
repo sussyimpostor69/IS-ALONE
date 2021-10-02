@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+	public GameObject Manager;
+	public GameObject firstperson;
 	public Transform point;
 	public int maxHealth = 100;
 	public int currentHealth;
@@ -36,20 +38,11 @@ public class Player : MonoBehaviour
 
 	public void Restart1()
 	{
-
-
-
-
-			if (dead == false)
-			{
-				dead = true;
-				SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+				//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 				Debug.Log("game over");
-				Invoke("Heal", healdelay);
-				dead = false;
+				//Invoke("Heal", healdelay);
+				Invoke("yes", dead);
 				
-			}
-		
 	}
 	void Update()
 	{
@@ -57,7 +50,7 @@ public class Player : MonoBehaviour
 		if (currentHealth == 0)
 		{
 
-			Invoke("Restart1", restartdelay);
+			Invoke("Restart1", dead);
 		}
 		
 		if (Input.GetKeyDown(KeyCode.K))
@@ -65,10 +58,20 @@ public class Player : MonoBehaviour
 			TakeDamage(20);
 		}
 	}
+	public void yes()
+    {
+		deathshit.SetActive(true);
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+		Time.timeScale = 0f;
+		firstperson.SetActive(false);
+		Manager.SetActive(false);
+	}
 
-	public bool dead = false;
-	public float restartdelay = 1f;
-	public float healdelay = 1f;
+	public GameObject deathshit;
+	private float restartdelay = 4f;
+	private float healdelay = 1f;
+	private float dead = 1f;
 }
 
     

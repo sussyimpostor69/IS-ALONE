@@ -12,11 +12,11 @@ public class gameoverscreen : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("Scene 3");
+        SceneManager.LoadScene("Survival Island");
     }
 
     public void ExitButton()
     {
-        SceneManager.LoadScene("menu");
+        SceneManager.LoadScene("main menu");
     }
 }
