@@ -66,10 +66,19 @@ public class Player : MonoBehaviour
 		Time.timeScale = 0f;
 		firstperson.SetActive(false);
 		Manager.SetActive(false);
+		Invoke("backtonormal", restartdelay);
 	}
-
+	public void backtonormal()
+    {
+		deathshit.SetActive(false);
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+		Time.timeScale = 1f;
+		firstperson.SetActive(true);
+		Manager.SetActive(true);
+	}
 	public GameObject deathshit;
-	private float restartdelay = 4f;
+	private float restartdelay = 3f;
 	private float healdelay = 1f;
 	private float dead = 1f;
 }

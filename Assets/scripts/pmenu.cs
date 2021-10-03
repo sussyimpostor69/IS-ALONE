@@ -28,16 +28,6 @@ public class pmenu : MonoBehaviour
         }
     }
 
-   
-
-
-
-
-
-
-
-
-
     public void Resume()
     {
         pausemenuui.SetActive(false);
@@ -49,7 +39,11 @@ public class pmenu : MonoBehaviour
         Cursor.visible = false;
     }
 
-
+    public void unlockcursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     void Pause()
     {
@@ -58,8 +52,7 @@ public class pmenu : MonoBehaviour
         Gameispaused = true;
         Health.SetActive(false);
         firstperson.SetActive(false);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        unlockcursor();
     }
-
+    public float del1 = 2f;
 }

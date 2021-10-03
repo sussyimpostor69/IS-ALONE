@@ -14,8 +14,8 @@ public class invenoryopener : MonoBehaviour
     }
     public void inventoryshit2()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
     }
     // Update is called once per frame
     void Update()
@@ -23,19 +23,18 @@ public class invenoryopener : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             inventoryshit();
-        }
-        if (InventoryObject.activeInHierarchy == true)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            //firstperson.SetActive(false);
-        }
-      
+
+            if (InventoryObject.activeInHierarchy == true)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
             if (InventoryObject.activeInHierarchy == false)
             {
-                inventoryshit2();
+                inventoryshit2();          
             }
-        
+        }
+         
     }
 }
 
