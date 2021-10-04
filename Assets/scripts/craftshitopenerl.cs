@@ -16,6 +16,12 @@ public class craftshitopenerl : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+    public void close()
+    {
+        Object.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
     // Update is called once per frame
     void Update()
     {
